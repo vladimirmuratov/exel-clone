@@ -1,0 +1,24 @@
+{
+  "name": "exel-clone",
+  "version": "1.0.0",
+  "description": "Pure JavaScript Exel Application",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimirmuratov/exel-clone.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "exel"
+  ],
+  "author": "Vladimir Muratov <vladimirmuratov@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimirmuratov/exel-clone/issues"
+  },
+  "homepage": "https://github.com/vladimirmuratov/exel-clone#readme"
+}
