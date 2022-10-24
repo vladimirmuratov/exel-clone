@@ -3,18 +3,27 @@ const CODES = {
   Z: 90
 }
 
-function toCell() {
-  return `<div class="cell" contenteditable></div>`
+function toCell(_, colNumber) {
+  return `<div class="cell" data-col="${colNumber}" contenteditable></div>`
 }
 
-function toColumn(colName) {
-  return `<div class="column">${colName}</div>`
+function toColumn(colName, index) {
+  return `
+        <div class="column" data-type="resizable" data-col="${index}">
+            ${colName}
+            <div class="col-resize" data-resize="col"></div>
+        </div>
+        `
 }
 
 function createRow(index, content) {
+  const resize = index ? '<div class="row-resize" data-resize="row"></div>' : ''
   return `
-    <div class="row">
-        <div class="row-info">${index ? index : ''}</div>
+    <div class="row" data-type="resizable">
+        <div class="row-info">
+            ${index ? index : ''}
+            ${resize}
+        </div>
         <div class="row-data">${content}</div>
     </div>
     `
