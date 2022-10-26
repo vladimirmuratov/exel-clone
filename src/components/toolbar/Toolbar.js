@@ -2,10 +2,11 @@ import {ExelComponent} from '@core/ExelComponent'
 
 export class Toolbar extends ExelComponent {
   static className = 'exel__toolbar'
-  constructor($root) {
+  constructor($root, optons) {
     super($root, {
       name: 'Toolbar',
-      listeners: ['click']
+      listeners: ['click'],
+      ...optons
     })
   }
 

@@ -2,6 +2,13 @@ import {ExelComponent} from '@core/ExelComponent'
 
 export class Header extends ExelComponent {
   static className = 'exel__header'
+  constructor($root, options) {
+    super($root, {
+      name: 'Header',
+      listeners: [],
+      ...options
+    })
+  }
 
   toHTML() {
     return `
