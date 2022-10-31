@@ -5,7 +5,9 @@ export class ExelComponent extends DomListener {
     super($root, options.listeners)
     this.name = options.name || ''
     this.emitter = options.emitter
+    this.subscribe = options.subscribe || []
     this.unsubscribers = []
+    this.store = options.store
 
     this.prepare()
   }
@@ -19,14 +21,25 @@ export class ExelComponent extends DomListener {
   }
 
   // Уведомляем слушателей про событие event
-  $dispatch(event, ...args) {
-    this.emitter.dispatch(event, ...args)
+  $emit(event, ...args) {
+    this.emitter.emit(event, ...args)
   }
 
   // Подписываемся на событие event
   $on(event, fn) {
     const unsub = this.emitter.subscribe(event, fn)
     this.unsubscribers.push(unsub)
+  }
+
+  // Уведомляем слушателей про событие
+  $dispatch(action) {
+    this.store.dispatch(action)
+  }
+
+  storeChanged() {}
+
+  isWatching(key) {
+    return this.subscribe.includes(key)
   }
 
   // Инициализируем компонент
