@@ -4,8 +4,8 @@ export class Emitter {
   }
 
   // Уведомляем слушателей если они есть
-  // table.dispatch('table:select, {a: 1})
-  dispatch(event, ...args) {
+  // table.emit('table:select, {a: 1})
+  emit(event, ...args) {
     if (!Array.isArray(this.listeners[event])) {
       return false
     }
@@ -32,11 +32,11 @@ export class Emitter {
 /* const emitter = new Emitter()
 const unsub = emitter.subscribe('vlad', data => console.log('Sub: ', data))
 setTimeout(() => {
-  emitter.dispatch('vlad', 'After 2 seconds')
+  emitter.emit('vlad', 'After 2 seconds')
 }, 2000)
 setTimeout(() => {
   unsub()
 }, 3000)
 setTimeout(() => {
-  emitter.dispatch('vlad', 'After 4 seconds')
+  emitter.emit('vlad', 'After 4 seconds')
 }, 4000)*/
