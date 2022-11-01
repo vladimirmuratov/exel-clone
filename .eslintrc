@@ -16,6 +16,6 @@
     "require-jsdoc": "off",
     "operator-linebreak": "off",
     "no-debugger": "off",
-    "no-unused-vars": "off" // удалить
+    "linebreak-style": "off"
   }
 }
