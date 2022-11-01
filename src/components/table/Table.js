@@ -102,7 +102,6 @@ export class Table extends ExelComponent {
     }
 
     onInput(event) {
-      // this.$emit('table:input', $(event.target))
       this.updateTextInStore($(event.target).text())
     }
 

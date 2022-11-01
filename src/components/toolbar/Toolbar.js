@@ -1,7 +1,7 @@
-import {createToolbar} from '@/components/toolbar/tooldbar.template';
-import {$} from '@core/dom';
-import {ExelStateComponent} from '@core/ExelStateComponent';
-import {defaultStyles} from '@/constants';
+import {createToolbar} from '@/components/toolbar/tooldbar.template'
+import {$} from '@core/dom'
+import {ExelStateComponent} from '@core/ExelStateComponent'
+import {defaultStyles} from '@/constants'
 
 export class Toolbar extends ExelStateComponent {
   static className = 'exel__toolbar'
