@@ -3,7 +3,8 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "extends": [
     "eslint:recommended",
@@ -16,6 +17,8 @@
     "require-jsdoc": "off",
     "operator-linebreak": "off",
     "no-debugger": "off",
-    "linebreak-style": "off"
-  }
+    "linebreak-style": "off",
+    "no-unused-vars": "off" // удалить
+  },
+  "plugins": ["jest"]
 }
